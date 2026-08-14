@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StockAvailability",
+  "type": "object",
+  "properties": {
+    "productId": { "type": "string", "example": "PROD-101" },
+    "productName": { "type": "string", "example": "Classic White Tee" },
+    "inStock": { "type": "boolean" },
+    "availableSizes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "quantityOnHand": { "type": "integer" }
+  },
+  "required": ["productId", "productName", "inStock", "availableSizes"]
+}

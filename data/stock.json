@@ -1,0 +1,7 @@
+{
+  "SKU-1001": {"name": "Blue T-Shirt (M)", "in_stock": true, "quantity": 42},
+  "SKU-1002": {"name": "Blue T-Shirt (L)", "in_stock": false, "quantity": 0},
+  "SKU-1003": {"name": "Red Sneakers (9)", "in_stock": true, "quantity": 5},
+  "SKU-1004": {"name": "Red Sneakers (10)", "in_stock": false, "quantity": 0},
+  "SKU-1005": {"name": "Black Backpack", "in_stock": true, "quantity": 18}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Northstar Support Bot</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #result { margin-top: 15px; font-weight: bold; color: #d9534f; }
+    </style>
+</head>
+<body>
+    <h2>Northstar Support Bot</h2>
+    <p>How can I help you today?</p>
+    
+    <input type="text" id="orderInput" placeholder="Enter Order ID (NS100)">
+    <button onclick="wireLookup()">Track Order</button>
+    
+    <div id="result"></div>
+
+    <script>
+        async function wireLookup() {
+            const input = document.getElementById('orderInput').value;
+            const display = document.getElementById('result');
+
+            try {
+                // TASK 2 WIRING: Connecting UI to the Data Schema
+                const response = await fetch('data/orders.json');
+                const data = await response.json();
+                
+                const found = data.orders.find(o => o.id === input);
+                
+                if (found) {
+                    display.style.color = "green";
+                    display.innerText = "Order Status: " + found.status;
+                } else {
+                    display.style.color = "red";
+                    display.innerText = "Order ID not found. Please check your ID.";
+                }
+            } catch (err) {
+                display.innerText = "Error: Could not connect to order database.";
+            }
+        }
+    </script>
+</body>
+</html>

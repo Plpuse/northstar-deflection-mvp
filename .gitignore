@@ -1,3 +1,5 @@
 .opencode-memory/
 .opencode/
 .polytest/
+
+__pycache__/

@@ -1,0 +1,19 @@
+{
+  "orders": [
+    {
+      "id": "NS100",
+      "status": "In Warehouse",
+      "last_update": "2023-10-25"
+    },
+    {
+      "id": "NS101",
+      "status": "Shipped",
+      "last_update": "2023-10-26"
+    },
+    {
+      "id": "NS102",
+      "status": "Out for Delivery",
+      "last_update": "2023-10-27"
+    }
+  ]
+}
